@@ -1,7 +1,4 @@
-const dotenvPath = process.env.NODE_ENV === 'production'
-  ? '/opt/authenticationBackend/shared/.env'
-  : undefined;
-require('dotenv').config(dotenvPath ? { path: dotenvPath } : {});
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
