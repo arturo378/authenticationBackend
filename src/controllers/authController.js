@@ -40,7 +40,6 @@ exports.register = async (req, res) => {
 
 // POST /api/auth/login
 exports.login = async (req, res) => {
-  console.log(randomVariable);
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ email }).select('+password');
